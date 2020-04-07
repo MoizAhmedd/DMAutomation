@@ -4,21 +4,23 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
+option = Options()
+
+option.add_argument("--disable-infobars")
+option.add_argument("start-maximized")
+option.add_argument("--disable-extensions")
+
+# Pass the argument 1 to allow and 2 to block
+option.add_experimental_option("prefs", { 
+"profile.default_content_setting_values.notifications": 1 
+})
+
 def facebook_message(email='',password='',message='',profile_names=['']):
 	"""
 	Send messages on facebook
 	"""
 	url = "https://facebook.com"
-	option = Options()
 
-	option.add_argument("--disable-infobars")
-	option.add_argument("start-maximized")
-	option.add_argument("--disable-extensions")
-
-	# Pass the argument 1 to allow and 2 to block
-	option.add_experimental_option("prefs", { 
-	"profile.default_content_setting_values.notifications": 1 
-	})
 	driver = webdriver.Chrome(chrome_options=option)
 	driver.get(url)
 	sleep(1)
@@ -45,15 +47,6 @@ def send_reddit_chat(username='',password='',message='',user_names=['']):
 	"""
 	Send reddit directs
 	"""
-	option = Options()
-
-	option.add_argument("--disable-infobars")
-	option.add_argument("start-maximized")
-	option.add_argument("--disable-extensions")
-
-	option.add_experimental_option("prefs", { 
-	"profile.default_content_setting_values.notifications": 1 
-	})
 	driver = webdriver.Chrome(chrome_options=option)
 	driver.get('https://www.reddit.com/login')
 	username_input = driver.find_element_by_id('loginUsername')
@@ -83,16 +76,6 @@ def instagram_dm_automation(username,password,message='',users=['']):
 	"""
 	Send instagram dms
 	"""
-	option = Options()
-
-	option.add_argument("--disable-infobars")
-	option.add_argument("start-maximized")
-	option.add_argument("--disable-extensions")
-
-	# Pass the argument 1 to allow and 2 to block
-	option.add_experimental_option("prefs", { 
-	"profile.default_content_setting_values.notifications": 1 
-	})
 	driver = webdriver.Chrome(chrome_options=option)
 	driver.get('https://www.instagram.com/accounts/login/')
 	sleep(3)
