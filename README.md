@@ -1,7 +1,7 @@
-##DM Automation scripts for Reddit,Facebook,Instagram
+## DM Automation scripts for Reddit,Facebook,Instagram
 <hr>
 
-#Notes
+# Notes
 <hr>
 <ul>
 	<li>Chrome Web Driver is required to run any of the functions, available here: https://chromedriver.chromium.org/downloads.</li>
@@ -12,4 +12,4 @@
 </ul>
  
  <br>
-#Working as of April 4th, 2020
+# Working as of April 4th, 2020
