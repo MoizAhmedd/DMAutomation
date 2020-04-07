@@ -1,4 +1,4 @@
-# DM Automation scripts for Reddit,Facebook,Instagram
+<strong>DM Automation scripts for Reddit,Facebook,Instagram</strong>
 
 ## Notes
 <ul>
