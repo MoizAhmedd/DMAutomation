@@ -1,8 +1,6 @@
-## DM Automation scripts for Reddit,Facebook,Instagram
-<hr>
+# DM Automation scripts for Reddit,Facebook,Instagram
 
-# Notes
-<hr>
+## Notes
 <ul>
 	<li>Chrome Web Driver is required to run any of the functions, available here: https://chromedriver.chromium.org/downloads.</li>
 	<li>If you prefer to use other web drivers, you will have to modify the selenium object instances to those webdrivers.</li>
